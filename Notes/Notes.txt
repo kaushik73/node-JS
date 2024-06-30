@@ -1,0 +1,17 @@
+Architecture -> request aati hai event queue m, iss event queue ko event loop dekh raha hota hai,
+agar request non-blocking operation hota hai too response send kar dete hai. 
+agar request blocking hoti hai too thread pool k paas jati hai vaha se ek thread(worker) assign hota hai vo sara kaam karke then respose beijts hai.
+
+Sync(ek k baad ek command) is blocking and Async is non-blocking
+
+JS is Async progm. language.
+
+Default thread pool size = 4
+
+npm init - make package.json file
+
+URL = uniform resource locator
+
+
+
+
