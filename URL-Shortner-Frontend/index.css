@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: aliceblue;
+  text-align: center;
+}
+#analytics-container {
+  margin-top: 20px;
+}
+#short-url-container {
+  margin-top: 20px;
+}
+
+span {
+  text-decoration: solid;
+  font-weight: bold;
+  font-size: large;
+}

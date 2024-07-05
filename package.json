@@ -10,7 +10,7 @@
     "short-unique-id": "^5.2.0"
   },
   "scripts": {
-    "start": "nodemon URL-Shortner/index.js"
+    "start-backend": "nodemon URL-Shortner-Backend/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,13 @@
   "bugs": {
     "url": "https://github.com/kaushik73/node-JS/issues"
   },
-  "homepage": "https://github.com/kaushik73/node-JS#readme"
+  "homepage": "https://github.com/kaushik73/node-JS#readme",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "jsonwebtoken": "^9.0.2"
+  }
 }

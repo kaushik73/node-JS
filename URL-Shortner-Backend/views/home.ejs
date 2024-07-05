@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1 style="margin-left: 20vw">------- Server Side Rendering -------</h1>
+    <div>
+      <h2>Enter Site URL to get short URL :</h2>
+      <form method="post" action="/url">
+        <label>site : </label>
+        <input type="text" name="url" />
+        <button type="submit">Generate</button>
+      </form>
+    </div>
+    <div>
+      <% if (locals.id) { %>
+      <h3>Generated URL : http://localhost:4000/url/<%= id %></h3>
+      <% } %>
+    </div>
+    <div>
+      <h2>Get Analytics</h2>
+      <form method="get" action="/analytics/shortURL">
+        <label>site : </label>
+        <input type="text" name="shortURL" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <% if (locals.analytics) { %>
+    <div>
+      <h3>Analytics for <%= shortURL %></h3>
+      <p>Total Clicks: <%= TotalClicks %></p>
+      <ul>
+        <% analytics.forEach(function(visit) { %>
+        <li><%= visit %></li>
+        <% }); %>
+      </ul>
+    </div>
+    <% } %>
+  </body>
+</html>

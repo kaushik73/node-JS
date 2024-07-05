@@ -1,7 +1,8 @@
 const URL = require("../models/url");
 const ShortUniqueId = require("short-unique-id");
-console.log("inside controller");
+
 async function handleGenerateNewShortURL(req, res) {
+  console.log(req, "handleGenerateNewShortURL");
   if (!req.body || !req.body.url) {
     return res.status(400).json({ message: "url is required" });
   }
@@ -12,9 +13,11 @@ async function handleGenerateNewShortURL(req, res) {
     shortId: uid.rnd(),
     visitHistory: [],
   });
-  return res
-    .status(201)
-    .json({ message: `addeed to DB success with id : ${result._id}` });
+
+  return res.status(201).json({
+    message: `addeed to DB success with id : ${result.shortId}`,
+    shortURL: result.shortId,
+  });
 }
 async function handleGetAllShortURL(req, res) {
   res.setHeader("X-developed-by", "Kaushik Jain");
@@ -39,6 +42,7 @@ async function handleGetURLByID(req, res) {
   );
   return res.redirect(data.redirectURL);
 }
+
 async function handleGetAnalyticsByID(req, res) {
   const shortId = req.params.shortId;
   if (!shortId) {

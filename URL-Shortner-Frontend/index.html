@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Analytics</title>
+    <link rel="stylesheet" href="./index.css" type="text/css" />
+  </head>
+  <body>
+    <nav>
+      <a href="signin.html" style="margin-right: 30px">Sign In</a>
+      <a href="signup.html">Sign Up</a>
+    </nav>
+    <div class="url-form-container">
+      <h2>Enter Site URL to get short URL :</h2>
+      <form id="short-url-form">
+        <label>site : </label>
+        <input type="text" name="url" id="url" />
+        <button type="submit">Generate</button>
+      </form>
+    </div>
+    <div id="short-url-container">
+      <span>Short URL : </span>
+      <div id="short-url"></div>
+    </div>
+    <br />
+    <hr />
+    <div class="analytics-form-container">
+      <h2>Get Analytics</h2>
+      <form id="analytics-form">
+        <label for="shortURL">Short URL: </label>
+        <input type="text" id="shortURL" name="shortURL" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div id="analytics-container">
+      <span>Analytics : </span>
+      <div id="analytics"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>
